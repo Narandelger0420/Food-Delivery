@@ -5,6 +5,7 @@ import { encryptHash } from "../../utils/bcrypt-utils";
 type UserBody = { email: string; password: string };
 
 export const signupController = async (req: Request, res: Response) => {
+  
   const { email, password } = req.body as UserBody;
 
   if (!email || !password) {
